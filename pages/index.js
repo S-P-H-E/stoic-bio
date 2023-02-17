@@ -10,10 +10,6 @@ import TRW from '@/public/images/trw.webp'
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  const handleImageLoad = () => {
-    setLoading(false);
-  }
-
   return (
     <>
       <Head>
@@ -24,9 +20,17 @@ export default function Home() {
       </Head>
       <div class='bg-black h-screen flex flex-col justify-center items-center text-white'>
         {loading ? (
-          <div className='w-24 bg-[#212121] h-24 rounded-full m-4 animate-pulse'></div>
+          <Image
+          src={Profile}
+          className='w-24 rounded-full m-4'
+          onLoad={() => setLoading(false)}
+        />
         ) : (
-          <Image src={Profile} className='w-24 rounded-full m-4' onLoad={handleImageLoad}/>
+          <Image
+            src={Profile}
+            className='w-24 rounded-full m-4'
+            onLoad={() => setLoading(false)}
+          />
         )}
         <h1 className='font-bold text-lg'>@cobratate</h1>
         <h2 className='text-[18px] m-1'>Top G, Billionare</h2>
