@@ -1,59 +1,35 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Profile from '@/public/images/tate.jpeg'
+import Profile from '@/public/images/profile.jpeg'
+import Link from '@/components/link.js'
 import { useState } from 'react'
 
-import Rumble from '@/public/images/rumble.png'
-import Twitter from '@/public/images/twitter.webp'
-import TRW from '@/public/images/trw.webp'
+import TikTok from '@/public/images/tiktok.png'
+import YouTube from '@/public/images/youtube.webp'
+import Instagram from '@/public/images/instagram.png'
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
 
   return (
     <>
       <Head>
-        <title>Cobra Tate</title>
-        <meta name="description" content="Check out Andrew Tate's Social Media Accounts" />
+        <title>S P H E</title>
+        <meta name="description" content="Check out my Social Media Accounts" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div class='bg-black h-screen flex flex-col justify-center items-center text-white'>
-        {loading ? (
-          <Image
-          src={Profile}
-          className='w-24 rounded-full m-4'
-          onLoad={() => setLoading(false)}
-        />
-        ) : (
-          <Image
+      <div class='bg-gradient-to-r from-black to-[#101010]  h-screen flex flex-col justify-center items-center text-white'>
+      <Image
             src={Profile}
-            className='w-24 rounded-full m-4'
-            onLoad={() => setLoading(false)}
+            className='w-24 rounded-full m-4 shadow-lg transition-all'
           />
-        )}
-        <h1 className='font-bold text-lg'>@cobratate</h1>
-        <h2 className='text-[18px] m-1'>Top G, Billionare</h2>
+        <h1 className='font-bold text-lg'>@sphe.exe</h1>
+        <h2 className='text-[18px] m-1'>Video Editor, Coder</h2>
 
       <div class="m-5 w-[300px]">
-          <button onClick={() => {event.preventDefault();window.open("https://rumble.com/c/TateSpeech", "_blank");}} className='w-[300px]'>
-            <div className='bg-[#212121] rounded-full flex justify-center items-center p-3 my-3 transition-all hover:scale-110'>
-              <Image src={Rumble} className='w-4 mx-1'/>
-              <p>Rumble</p> 
-            </div>
-          </button>
-          <button onClick={() => {event.preventDefault();window.open("https://twitter.com/Cobratate", "_blank");}} className='w-[300px]'>
-            <div className='bg-[#212121] rounded-full flex justify-center items-center p-3 my-3 transition-all hover:scale-110'>
-            <Image src={Twitter} className='w-4 mx-1'/>
-              <p>Twitter</p> 
-            </div>
-          </button>
-          <button onClick={() => {event.preventDefault();window.open("https://www.therealworldportal.com", "_blank");}} className='w-[300px]'>
-            <div className='bg-[#212121] rounded-full flex justify-center items-center p-3 my-3 transition-all hover:scale-110'>
-              <Image src={TRW} className='w-6 mx-1'/>
-              <p>The Real World</p> 
-            </div>
-          </button>
+        <Link Logo={TikTok} Name={'TikTok'} Link={"https://www.tiktok.com/@empire_cord"}/>
+        <Link Logo={YouTube} Name={'YouTube'} Link={"https://www.youtube.com/@PositiveMusculinity"}/>
+        <Link Logo={Instagram} Name={'Instagram'} Link={"https://www.instagram.com/sphe.exe/"}/>
       </div>
       <h1 className='text-[25px] selection:bg-black'>📬</h1>
   </div>
