@@ -8,3 +8,7 @@
     font-family: 'Space Mono', monospace;
     -webkit-tap-highlight-color: transparent;
 }
+
+body {
+    background-color: #F5F5F5;
+}
