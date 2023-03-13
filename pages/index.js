@@ -30,7 +30,7 @@ export default function Home() {
       <div class="m-5 w-[300px]">
         <Link Logo={TikTok} Name={'TikTok'} Link={"https://www.tiktok.com/@sphe.exe"}/>
         <Link Logo={TikTok} Name={'Visit my website'} Link={"https://sphe.vercel.app/"}/>
-        <Link Logo={Discord} Name={'Join my discord community'} Link={"https://discord.gg/PBpeEV8cmC"}/>
+        {/* <Link Logo={Discord} Name={'Join my discord community'} Link={"https://discord.gg/PBpeEV8cmC"}/> */}
       </div>
       <h1 className='text-[25px] selection:bg-transparent'>📬</h1>
   </div>
