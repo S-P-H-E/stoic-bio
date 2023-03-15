@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>S P H E</title>
+        <title>@sphe.exe</title>
         <meta name="description" content="Check out my Social Media Accounts" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -29,6 +29,7 @@ export default function Home() {
 
       <div class="m-5 w-[300px]">
         <Link Logo={TikTok} Name={'TikTok'} Link={"https://www.tiktok.com/@sphe.exe"}/>
+        <Link Logo={TikTok} Name={'Instagram'} Link={"https://www.instagram.com/sphe.exe"}/>
         <Link Logo={TikTok} Name={'Visit my website'} Link={"https://sphe.vercel.app/"}/>
         {/* <Link Logo={Discord} Name={'Join my discord community'} Link={"https://discord.gg/PBpeEV8cmC"}/> */}
       </div>
