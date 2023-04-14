@@ -31,7 +31,7 @@ export default function Home() {
       </div>
       
       <h1 className='font-bold text-lg'>S T O I C</h1>
-      <h2 className='text-[18px] mb-2 text-center'>"Raw Action Solves Everything.<br /> Caution Breeds Fear."</h2>
+      <h2 className='text-[18px] mb-2 text-center'>&quot;Raw Action Solves Everything.<br /> Caution Breeds Fear.&quot;</h2>
 
       <Bio />
       
