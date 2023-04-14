@@ -5,7 +5,7 @@ export default function Link({Logo, Name, Link}) {
 
   return (
       <button onClick={() => {event.preventDefault();window.open(Link, "_blank");}} className='w-full'>
-          <div className='border border-black shadow-xl rounded-full flex justify-center items-center p-3 my-3 transition-all lg:hover:scale-110 lg:hover:shadow-2xl'>
+          <div className='bg-[#1A1A1A] shadow-xl rounded-xl flex justify-center items-center gap-2 px-3 py-5 my-3 transition-all lg:hover:scale-110 lg:hover:shadow-2xl'>
             <p>{Name}</p>
           </div>
       </button>
