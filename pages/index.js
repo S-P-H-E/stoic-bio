@@ -2,17 +2,30 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Profile from '@/public/images/profile.jpg'
 import Link from '@/components/Links.js'
-import { useState } from 'react'
-import { useSpring, animated, config } from 'react-spring';
-
-import TikTok from '@/public/images/tiktok.png'
-import YouTube from '@/public/images/youtube.webp'
-import Instagram from '@/public/images/instagram.png'
-import Discord from '@/public/images/discord.png'
+import { MdEmail } from 'react-icons/md'
+import { FiBarChart2 } from 'react-icons/fi'
+import { useEffect, useMemo, useState } from 'react'
+import { FloatButton, Tooltip } from 'antd';
 import Bio from '@/components/Bio'
+import { getChannelViews, getChannelIdFromCustomUrl } from "@/youtubeAPI"; // Change the path according to your project structure
 import EmailList from '@/components/EmailList'
 
 export default function Home() {
+  const [arrow, setArrow] = useState('Show');
+
+  const text = <span>EMAIL ME</span>;
+
+  const mergedArrow = useMemo(() => {
+      if (arrow === 'Hide') {
+        return false;
+      }
+      if (arrow === 'Show') {
+        return true;
+      }
+      return {
+        pointAtCenter: true,
+      };
+  }, [arrow]);
 
   return (
     <>
@@ -22,6 +35,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* Float */}
+      <Tooltip placement="left" title={text} arrow={mergedArrow} color='blue'>
+        <FloatButton 
+          icon={<MdEmail />}
+          type='primary'
+          onClick={() => {
+          window.location.href = "mailto:sphe.g.personal@gmail.com";
+        }}/>
+      </Tooltip>
+
       <div class='h-screen flex flex-col justify-center items-center text-white'>
       <div>
         <Image
@@ -37,12 +61,15 @@ export default function Home() {
       
       <div class="m-4 w-[300px] sm:w-[400px] flex flex-col justify-center items-center">
         {/* <EmailList /> */}
-        <Link Name={'Join my discord community'} Link={"https://sphe.vercel.app/"}/>
-        <Link Name={'Get presets and packs'} Link={"https://sustainable-agency.vercel.app/"}/>
-        {/* <Link Logo={Discord} Name={'Join my discord community'} Link={"https://discord.gg/PBpeEV8cmC"}/> */}
+        {/* <Link Name={'Join my discord community'} Link={"https://sphe.vercel.app/"}/> */}
+        <Link Name={'Get editing presets and packs'} Link={"https://payhip.com/b/pQZHf"}/>
       </div>
 
-      <h1 className='text-[25px] selection:bg-transparent'>🔗</h1>
+      {/* <h1 className='text-[25px] selection:bg-transparent cursor-default'>🔗</h1> */}
+        <div className='border px-2 rounded-full flex justify-center items-center text-[#939393] border-[#939393] gap-1'>
+          <FiBarChart2 />
+          <h1>10k+</h1>
+        </div>
   </div>
     </>
   )
