@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Profile from '@/public/images/profile.jpg'
 import Link from '@/components/Links.js'
 import { MdEmail } from 'react-icons/md'
-import { FiBarChart2 } from 'react-icons/fi'
+import { AiFillEye } from 'react-icons/ai'
 import { useEffect, useMemo, useState } from 'react'
 import { FloatButton, Tooltip } from 'antd';
 import Bio from '@/components/Bio'
@@ -66,7 +66,7 @@ export default function Home() {
 
       {/* <h1 className='text-[25px] selection:bg-transparent cursor-default'>🔗</h1> */}
         <div className='border px-2 rounded-full flex justify-center items-center text-[#939393] border-[#939393] gap-1'>
-          <FiBarChart2 />
+          <AiFillEye />
           <h1>10k+</h1>
         </div>
   </div>
