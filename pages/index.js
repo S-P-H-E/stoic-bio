@@ -7,7 +7,6 @@ import { FiBarChart2 } from 'react-icons/fi'
 import { useEffect, useMemo, useState } from 'react'
 import { FloatButton, Tooltip } from 'antd';
 import Bio from '@/components/Bio'
-import { getChannelViews, getChannelIdFromCustomUrl } from "@/youtubeAPI"; // Change the path according to your project structure
 import EmailList from '@/components/EmailList'
 
 export default function Home() {
@@ -61,7 +60,7 @@ export default function Home() {
       
       <div class="m-4 w-[300px] sm:w-[400px] flex flex-col justify-center items-center">
         {/* <EmailList /> */}
-        {/* <Link Name={'Join my discord community'} Link={"https://sphe.vercel.app/"}/> */}
+        <Link Name={'Join my discord community'} Link={"https://stoic-email-list.vercel.app/"}/>
         <Link Name={'Get editing presets and packs'} Link={"https://payhip.com/b/pQZHf"}/>
       </div>
 
